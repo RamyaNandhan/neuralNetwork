@@ -1,0 +1,41 @@
+# ReneWind ML Prediction Project
+
+![Python](https://img.shields.io/badge/Python-3.10-blue)
+![Scikit-Learn](https://img.shields.io/badge/ScikitLearn-ML-orange)
+![TensorFlow](https://img.shields.io/badge/TensorFlow-2.19-red)
+![License](https://img.shields.io/badge/License-MIT-green)
+
+Machine Learning project that predicts renewable wind energy outcomes using structured data and multiple ML models.
+
+---
+
+## Project Overview
+
+This project builds an end-to-end machine learning pipeline for predicting wind energy patterns using historical dataset features.
+
+The workflow includes:
+
+- Data loading
+- Exploratory data analysis
+- Feature engineering
+- Model training
+- Model evaluation
+
+---
+
+## Project Architecture
+
+```mermaid
+flowchart LR
+
+A[Raw Dataset] --> B[Data Preprocessing]
+
+B --> C[Feature Engineering]
+
+C --> D[Train Test Split]
+
+D --> E[Model Training]
+
+E --> F[Model Evaluation]
+
+F --> G[Prediction Output]
