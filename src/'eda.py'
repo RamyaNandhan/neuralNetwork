@@ -1,0 +1,13 @@
+import matplotlib.pyplot as plt
+import seaborn as sns
+
+def histogram_boxplot(data, feature):
+    plt.figure(figsize=(10,5))
+
+    plt.subplot(1,2,1)
+    sns.histplot(data[feature])
+
+    plt.subplot(1,2,2)
+    sns.boxplot(x=data[feature])
+
+    plt.show()

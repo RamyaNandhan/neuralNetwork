@@ -1,0 +1,45 @@
+import pandas as pd
+
+
+def load_data(file_path):
+    """
+    Load dataset from a CSV file.
+
+    Parameters
+    ----------
+    file_path : str
+        Path to the dataset
+
+    Returns
+    -------
+    pd.DataFrame
+        Loaded dataframe
+    """
+
+    df = pd.read_csv(file_path)
+
+    print("Dataset loaded successfully")
+    print("Shape of dataset:", df.shape)
+
+    return df
+
+
+def split_features_target(df, target_column):
+    """
+    Split dataframe into features and target.
+
+    Parameters
+    ----------
+    df : DataFrame
+    target_column : str
+
+    Returns
+    -------
+    X : DataFrame
+    y : Series
+    """
+
+    X = df.drop(columns=[target_column])
+    y = df[target_column]
+
+    return X, y
